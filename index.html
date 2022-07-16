@@ -18,10 +18,6 @@
     <header>
         <div class="header-container">
 
-            <div class="logo-container">
-                <a href="#home"><img src="logo-img.jpg" alt=""></a>
-            </div>
-
             <div class="left-right">
                 <div class="left-container">
                     <div>
@@ -44,15 +40,19 @@
     </header>
     <!--============== navbar for desktop ==============-->
     <Nav>
-        <div class="navbar-container topnav">
+        <div class="navbar-container topnav" id="navbar">
+            <div class="logo-container">
+                <a href="#logo"><img src="logo-img.jpg" alt=""></a>
+            </div>
             <div class="navbar-menu" id="myLinks">
+                <a href="#home">HOME</a>
+
                 <a href="#about">ABOUT</a>
                 <a href="#service">SERVICE</a>
                 <a href="#team">TEAM</a>
                 <!-- <i class="fa fa-user"></i>TEAM -->
                 <a href="#blog">BLOG</a>
                 <!-- <i class="fa fa-th"></i> -->
-                <a href="#skill">SKILL</a>
                 <!-- <i class="fa fa-usd"></i> -->
                 <a href="#contact">CONTACT</a>
             </div>
@@ -61,6 +61,40 @@
             </a>
         </div>
     </Nav>
+    <!-- =================responsive navbar=========== -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+
+    <!-- <-----------------shrink navbar---------------->
+    <script>
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                // document.getElementById("navbar-container").style.padding = "30px 10px";
+                document.getElementById("navbar").style.height = "5rem";
+                document.getElementById("logo").style.height = "0%";
+                // document.getElementById("navbar").style.opacity= ".1";
+
+
+
+            } else {
+                // document.getElementById("navbar-container").style.padding = "80px 10px";
+                document.getElementById("navbar").style.height = "7rem";
+                document.getElementById("logo").style.height = "7rem";
+                // document.getElementById("navbar").style.opacity= ".1";
+
+            }
+        }
+    </script>
 
     <!-- ----------------home section--------------- -->
     <section class="home" id="home">
@@ -97,7 +131,57 @@
         <div class="about-container">
             <h3>ABOUT THE COMPANY</h3>
             <P class="sub-title">Key features of our company</P>
-            <div class="about-bottom">
+
+            <div class="right-container">
+
+                <p> Digiinext is a performance hacking & digital marketing agency based in India. We’ve been working
+                    with
+                    growing startups and established brands across 4 continents.
+                    Website Development, Social Media Management ,User acquisition, conversion rate optimisation and
+                    lead generation are areas where we excel. We’ve had the pleasure to market companies which range
+                    from the size of early-stage startups to established multinational companies.
+                    Some of the popular verticals we’ve been working on include eCommerce, mobile apps and SaaS
+                    products<span id="btn-less">...</span> <span id="btn-more">
+                        We are a strong team of data-driven growth marketers, digital advertising experts and user
+                        acquisition strategists. We are not just a digital strategy company. We help you at all
+                        stages,
+                        from
+                        drafting a strategy, executing the same and pivoting when needed.
+                        Our processes involve building marketing experiments, quickly validating them, scaling what
+                        works
+                        and discarding whatever doesn’t.</span>
+                    <button id="read-more" onclick="aboutmore()">Read more</button>
+                </p>
+
+            </div>
+
+
+        </div>
+        </div>
+        <!-- ....................about javascript....................... -->
+        <script>
+            function aboutmore() {
+                var less = document.getElementById("btn-less");
+                var more = document.getElementById("btn-more");
+                var bttn = document.getElementById("read-more");
+
+                if (less.style.display === "none") {
+                    less.style.display = "inline";
+                    bttn.innerHTML = "read more";
+                    more.style.display = "none";
+
+                } else {
+                    less.style.display = "none";
+                    bttn.innerHTML = "read less";
+                    more.style.display = "inline";
+
+                }
+            }
+        </script>
+
+
+
+        <!-- <div class="about-bottom">
                 <div class="content1 about-content">
                     <i class="fa fa-desktop"></i>
                     <p class="features">Responsive</p>
@@ -122,8 +206,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nihil alias sint facilis quo
                         eaque esse molestias quod voluptatibus cupiditate!</p>
                 </div>
-            </div>
-        </div>
+            </div> -->
 
         <!-- ----promo section used to target other section--------------- -->
         <div class="promo-section">
@@ -149,6 +232,52 @@
         </div>
     </section>
 
+
+    <!-- ----------------service section--------------- -->
+    <section class="service" id="service">
+        <div class="service-container">
+            <div class="title">
+                <h3>Our SERVICES</h3>
+                <p class="service-subtitle">We provide the best services for customers</p>
+            </div>
+
+            <div class="service-bottom">
+
+                <div class="content1 service-content">
+                    <i class="fa fa-desktop"></i>
+                    <p class="features">Social Media Marketing</p>
+                </div>
+                <div class="content2 service-content">
+                    <i class="fa fa-search "></i>
+                    <p class="features">Search Engine Marketing</p>
+                </div>
+                <div class="content3 service-content">
+                    <i class="fa fa-diamond "></i>
+                    <p class="features">Campaign Management and Lead Generation</p>
+                </div>
+                <div class="content4 service-content">
+                    <i class="fa fa-envelope"></i>
+                    <p class="features">Email Marketing</p>
+                </div>
+                <div class="content4 service-content">
+                    <i class="fa fa-camera"></i>
+                    <p class="features">Photoshoot</p>
+                </div>
+                <div class="content4 service-content">
+                    <i class="fa fa-laptop"></i>
+                    <p class="features">Website Development</p>
+                </div>
+                <div class="content4 service-content">
+                    <i class="fa fa-chrome"></i>
+                    <p class="features">Search ENGINE OPTIMIZATION</p>
+                </div>
+                <div class="content4 service-content">
+                    <i class="fa fa-bullhorn"></i>
+                    <p class="features">Influencer Marketing</p>
+                </div>
+            </div>
+
+    </section>
     <!-- <section class="service" id="service">
         <div class="service-container">
 
@@ -221,6 +350,7 @@
                 </div>
             </div>
         </div>
+
 
 
         <!-------------- Promo Section "Statistics" --------------->
@@ -330,19 +460,34 @@
                 <p><i class="fa fa-envelope"></i>Email:-mail@gmail.com</p>
             </div>
 
-            <form action="">
+            <form id="form">
                 <div class="right-container">
-                    <input type="text" placeholder="Name">
-                    <input type="text" name="" id="name" placeholder="Email">
-                    <input type="text" name="" id="name" placeholder="Subject">
-                    <input type="textarea" name="" id="name" placeholder="Message">
-                    <div><button type="submit" class="contact-btn"><i class="fa fa-paper-plane"></i>
-                            <P>Send Message</P>
-                        </button>
-                    </div>
+                <div class="field">
+                    <input type="text" name="from_name" id="from_nam=e" placeholder="name" required>
                 </div>
-            </form>
+                <div class="field">
+                    <input type="text" name="to_name" id="to_name" placeholder="email" required>
+                </div>
 
+                <div class="field">
+                    <input type="text" name="reply_to" id="reply_to" placeholder="subject" required>
+                </div>
+                <div class="field">
+                    <input type="text" name="message" id="message" placeholder="message" required>
+                </div>
+                <div class="contact-btn">
+                    <input type="submit" id="button" value="Send Email" class="contact-bt" required>
+                </div>
+
+            </form>
+        </div>
+            <script src="contact_demo.js"></script>
+            <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+            <script type="text/javascript">
+                emailjs.init('x_FsP01pzr0xqMlnP')
+            </script>
         </div>
     </section>
 
