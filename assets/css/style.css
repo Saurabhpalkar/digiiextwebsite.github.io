@@ -1607,7 +1607,7 @@ section {
   padding: 10px 12px;
 }
 
-.contact .contact-form button[type=submit] {
+.contact .contact-form input[type=submit] {
   background: #47b2e4;
   border: 0;
   padding: 12px 34px;
