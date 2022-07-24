@@ -122,7 +122,7 @@ h6 {
 #header {
   transition: all 0.5s;
   z-index: 997;
-  padding: 15px 0;
+  padding: 5px 0;
 }
 
 #header.header-scrolled,
@@ -138,6 +138,7 @@ h6 {
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
+  /* background-color: ; */
 }
 
 #header .logo a {
@@ -145,8 +146,9 @@ h6 {
 }
 
 #header .logo img {
-  max-height: 3rem;
+  max-height: 4rem;
   width: fit-content;
+  filter: opacity(.9) drop-shadow( 0 0 0 #47b2e4);
 }
 
 /*--------------------------------------------------------------
@@ -409,7 +411,7 @@ h6 {
 #hero h1 {
   margin: 0 0 10px 0;
   font-size: 60px;
-  font-weight: 700;
+  /* font-weight: 700; */
   line-height: 56px;
   color: #fff;
 }
@@ -1789,7 +1791,8 @@ section {
 
 #footer .footer-top {
   padding: 60px 0 30px 0;
-  background: #fff;
+  background: black;
+  /* color: white; */
 }
 
 #footer .footer-top .footer-contact {
